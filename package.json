@@ -1,0 +1,23 @@
+{
+  "name": "rent-a-car",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "corns": "^0.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "git": "^0.1.5",
+    "nodemon": "^3.1.9",
+    "rent-a-car": "file:",
+    "sequelize": "^6.37.6",
+    "sqlite3": "^5.1.7"
+  }
+}

@@ -7,7 +7,7 @@ const app = express();
 //app.use(cors());
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*")
+  res.header("Access-Control-Allow-Origin : https://rent-a-car-frontend-v2.onrender.com")
   res.header(
     "Access-Control-Allow-Headers",
     "content-type"

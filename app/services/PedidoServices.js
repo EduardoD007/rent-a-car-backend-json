@@ -1,13 +1,15 @@
 const util = require('../utils/conversorString.js');
-
 const CarroServices = require('./CarroServices.js');
 const Services = require('./Services.js');
+import path from "path"
+
+const filePathPedidos = path.join(process.cwd(),'./app/database/models', 'pedidos.json')
 
 const carroServices = new CarroServices();
 
 class PedidoServices extends Services {
-  constructor(nomeDoModel) {
-    super('./app/database/models/pedidos.json');
+  constructor() {
+    super(filePathPedidos);
   }
 
   async criaRegistro(registro, carroId) {

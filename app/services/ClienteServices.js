@@ -1,9 +1,11 @@
 const Services = require('./Services.js');
 import path from "path"
 
+const filePathClientes = path.join(process.cwd(),'./app/database/models', 'clientes.json')
+
 class ClienteServices extends Services {
-  constructor(nomeDoModel){
-    super('./app/database/models/clientes.json');
+  constructor(){
+    super(filePathClientes);
   }
 }
 

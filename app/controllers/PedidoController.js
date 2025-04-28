@@ -15,7 +15,6 @@ class PedidoController extends Controller {
     const registro = req.body;
     conversorString(registro);
     conversorData(registro)
-    console.log(registro)
 
     try {
       const novoRegistro = await pedidoServices.criaRegistro(registro, registro.carro_id);

@@ -2,7 +2,7 @@ const Services = require('./Services.js');
 
 class CarroServices extends Services {
   constructor() {
-    super('./app/database/models/carros.json');
+    super('app/database/models/carros.json');
   }
 }
 

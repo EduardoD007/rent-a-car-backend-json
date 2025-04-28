@@ -1,13 +1,17 @@
 const fs = require("fs")
 const ordenaListaNumeros = require('../utils/ordenaListaNumeros')
+import path from "path"
+
+const filePath = path.join(process.cwd(),'/app/database/models', 'carros.json')
 
 class Services {
   constructor(model) {
     this.model = model
   }
 
+
   async buscaTodosOsRegistros(where) {
-    const registros =  JSON.parse(fs.readFileSync(this.model))
+    const registros =  JSON.parse(fs.readFileSync(filePath))
 
     function filtraRegistros (objeto) {
       let bool 

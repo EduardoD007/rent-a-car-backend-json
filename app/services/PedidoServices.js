@@ -3,12 +3,12 @@ const CarroServices = require('./CarroServices.js');
 const Services = require('./Services.js');
 import path from "path"
 
-const filePathPedidos = path.join(process.cwd(),'./temp/', 'pedidos.json')
+const filePathPedidos = path.join(process.cwd(),'./app/database/models', 'pedidos.json')
 
 const carroServices = new CarroServices();
 
 class PedidoServices extends Services {
-  constructor() {
+  constructor(nomeDoModel) {
     super(filePathPedidos);
   }
 

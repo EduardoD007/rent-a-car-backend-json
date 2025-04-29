@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 
   app.use(cors());
 
-  app.use(routes)
+  routes(app);
   // Pass to next layer of middleware
   next();
 

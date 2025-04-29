@@ -67,6 +67,7 @@ class Services {
     const novoRegistro = [...registros, registro]
 
     fs.writeFileSync(this.model,JSON.stringify(novoRegistro))
+    console.log("adicionou carro")
   }
 
   async atualizaRegistro(registroAtualizar, where) {
@@ -89,6 +90,7 @@ class Services {
   }
 
   async excluiRegistro(id) {
+    console.log('entrou em excluir')
     const registros = JSON.parse(fs.readFileSync(this.model))
     registros.splice(registros.findIndex(e => e.id === id),1)
     fs.writeFileSync((this.model), JSON.stringify(registros))

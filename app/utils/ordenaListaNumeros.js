@@ -1,6 +1,5 @@
 
 const ordenaListaNumeros = (array) => {
-  console.log(array)
   let menor
   let arrayOrdenada = []
   for(let i = 0; i <= array.length; i++) {
@@ -17,7 +16,6 @@ const ordenaListaNumeros = (array) => {
     arrayOrdenada.push(menor)
     i = 0
   }
-  console.log(arrayOrdenada)
   return arrayOrdenada
 }
 

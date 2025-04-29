@@ -27,6 +27,7 @@ app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Credentials', true);
 
   app.delete('/pedidos/:pedidoId/:carroId')
+  app.patch('/carros/:id')
 
   // Pass to next layer of middleware
   next();

@@ -4,15 +4,13 @@ const cors = require('cors')
 
 const app = express();
 
-app.use(cors({
-  origin: 'https://rent-a-car-frontend-v2.onrender.com'
-}));
 
+routes(app);
 
-/* app.use(function (req, res, next) {
+app.use(function (req, res, next) {
 
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'https://rent-a-car-frontend-v2.onrender.com');
 
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -24,11 +22,10 @@ app.use(cors({
   // to the API (e.g. in case you use sessions)
   res.setHeader('Access-Control-Allow-Credentials', true);
 
-
+  app.use(cors());
   // Pass to next layer of middleware
   next();
-}); */
+}); 
 
-routes(app);
 
 module.exports = app;

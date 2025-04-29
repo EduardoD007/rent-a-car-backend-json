@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express();
 
 
-routes(app);
+
 
 app.use(function (req, res, next) {
 
@@ -26,6 +26,9 @@ app.use(function (req, res, next) {
   // Pass to next layer of middleware
   next();
 }); 
+
+
+routes(app);
 
 
 module.exports = app;

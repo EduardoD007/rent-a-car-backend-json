@@ -23,12 +23,16 @@ app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Credentials', true);
 
   app.use(cors());
+
+  app.use(routes)
   // Pass to next layer of middleware
   next();
+
+
 }); 
 
 
-routes(app);
+
 
 
 module.exports = app;

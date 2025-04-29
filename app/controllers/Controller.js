@@ -61,6 +61,7 @@ class Controller {
   async exclui(req, res) {
     const { ...id } = req.params;
     conversorString(id)
+    console.log('Id do carro', id)
 
     try {
       await this.instanciaServices.excluiRegistro(id);

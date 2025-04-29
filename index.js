@@ -7,6 +7,9 @@ const app = express();
 
 app.use(cors());
 
+app.delete('/pedidos/:pedidoId/:carroId')
+app.patch('/carros/:id')
+
 routes(app);
 
 
@@ -26,8 +29,6 @@ app.use(function (req, res, next) {
   // to the API (e.g. in case you use sessions)
   res.setHeader('Access-Control-Allow-Credentials', true);
 
-  app.delete('/pedidos/:pedidoId/:carroId')
-  app.patch('/carros/:id')
 
   // Pass to next layer of middleware
   next();

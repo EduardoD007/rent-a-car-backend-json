@@ -12,14 +12,14 @@ class PedidoServices extends Services {
   }
 
   async criaRegistro(registro, carroId) {
-    
+
     await super.criaRegistro(registro);
     await carroServices.atualizaRegistro({ status: 'Alugado' }, { id: carroId });
   }
 
   async excluiRegistro(params) {
-    //await super.excluiRegistro(params.pedidoId);
-    await carroServices.atualizaRegistro({ status: 'Disponível' }, { id: params.carroId })
+    await super.excluiRegistro(params.pedidoId);
+    //await carroServices.atualizaRegistro({ status: 'Disponível' }, { id: params.carroId })
   }
 }
 

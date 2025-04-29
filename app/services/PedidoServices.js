@@ -12,7 +12,7 @@ class PedidoServices extends Services {
   }
 
   async criaRegistro(registro, carroId) {
-
+    
     await super.criaRegistro(registro);
     await carroServices.atualizaRegistro({ status: 'Alugado' }, { id: carroId });
   }

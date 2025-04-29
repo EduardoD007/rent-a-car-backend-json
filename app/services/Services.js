@@ -72,8 +72,9 @@ class Services {
 
   async atualizaRegistro(registroAtualizar, where) {
     const registros = JSON.parse(fs.readFileSync(this.model))
-
+    debugger
     var data = registros.filter(registro => registro.id === Number(where.id))
+    console.log(data)
 
     data.map(objeto => {
       for(const propData in objeto) {

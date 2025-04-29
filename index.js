@@ -4,7 +4,9 @@ const cors = require('cors')
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://rent-a-car-frontend-v2.onrender.com'
+}));
 
 
 /* app.use(function (req, res, next) {

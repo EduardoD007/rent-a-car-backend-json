@@ -18,8 +18,8 @@ class PedidoServices extends Services {
   }
 
   async excluiRegistro(params) {
-    await super.excluiRegistro(params.pedidoId);
-    //await carroServices.atualizaRegistro({ status: 'Disponível' }, { id: params.carroId })
+    //await super.excluiRegistro(params.pedidoId);
+    await carroServices.atualizaRegistro({ status: 'Disponível' }, { id: params.carroId })
   }
 }
 
